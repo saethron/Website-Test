@@ -34,4 +34,82 @@
       text-align: center;
       color: white;
       z-index: 10;
-      pointer-events: none; /* overlay itself doesn't bloc*
+      pointer-events: none; /* overlay itself doesn't block clicks */
+    }
+
+    /* Buttons remain clickable */
+    .overlay a {
+      pointer-events: auto;
+    }
+
+    /* Mobile-friendly wrapping with consistent spacing */
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;           /* space between buttons */
+      padding: 0 16px;     /* side padding on small screens */
+      margin-top: 0;       /* adjust if you want higher/lower */
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 8px 18px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      white-space: nowrap; /* keep text on one line */
+      transition: background 0.2s, color 0.2s;
+      background: transparent;
+    }
+
+    .link-button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Small-screen tweaks */
+    @media (max-width: 480px) {
+      body {
+        /* pushes the image down a bit so buttons don't overlap the top of the art */
+        background-position: center 70px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .link-button {
+        font-size: 0.72rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="links">
+      <a class="link-button"
+         href="https://www.patreon.com/c/saethron/posts?vanity=saethron"
+         target="_blank" rel="noopener noreferrer">Patreon</a>
+
+      <a class="link-button"
+         href="https://www.instagram.com/saethron/"
+         target="_blank" rel="noopener noreferrer">Instagram</a>
+
+      <a class="link-button"
+         href="https://www.youtube.com/@saethron"
+         target="_blank" rel="noopener noreferrer">YouTube</a>
+
+      <a class="link-button"
+         href="https://saethron.bandcamp.com/album/songs-of-dune"
+         target="_blank" rel="noopener noreferrer">Bandcamp</a>
+    </div>
+  </div>
+</body>
+</html>
