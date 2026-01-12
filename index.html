@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SAETHRON</title>
 
-  <link rel="icon" type="image/png" href="Sae2icon.png">
-
+<link rel="icon" type="image/png" href="Sae2icon.png">
+  
   <style>
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: black;
     }
 
     body {
@@ -23,37 +21,22 @@
       background-color: black;
     }
 
-    /* Keep links visible and away from notches/bars */
     .overlay {
-      position: fixed;
+      position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
-      padding-top: max(16px, env(safe-area-inset-top));
-      padding-bottom: 16px;
+      padding: 40px 0;
       text-align: center;
       color: white;
-      z-index: 10;
-      pointer-events: none; /* overlay itself doesn't block clicks */
     }
 
-    /* Buttons remain clickable */
-    .overlay a {
-      pointer-events: auto;
-    }
-
-    /* Mobile-friendly wrapping with consistent spacing */
     .links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;           /* space between buttons */
-      padding: 0 16px;     /* side padding on small screens */
-      margin-top: 0;       /* adjust if you want higher/lower */
+      margin-top: -10px;
     }
 
     .link-button {
       display: inline-block;
+      margin: 30px;
       padding: 8px 18px;
       color: white;
       text-decoration: none;
@@ -61,55 +44,57 @@
       border-radius: 30px;
       font-size: 0.75rem;
       letter-spacing: 0.1em;
-      line-height: 1;
-      white-space: nowrap; /* keep text on one line */
-      transition: background 0.2s, color 0.2s;
-      background: transparent;
+      transition: background 0.3s, color 0.3s;
     }
 
     .link-button:hover {
       background: white;
       color: black;
     }
-
-    /* Small-screen tweaks */
-    @media (max-width: 480px) {
-      body {
-        /* pushes the image down a bit so buttons don't overlap the top of the art */
-        background-position: center 70px;
-      }
-
-      .links {
-        gap: 12px;
-      }
-
-      .link-button {
-        font-size: 0.72rem;
-        padding: 8px 16px;
-      }
-    }
   </style>
 </head>
 
 <body>
+
   <div class="overlay">
     <div class="links">
-      <a class="link-button"
-         href="https://www.patreon.com/c/saethron/posts?vanity=saethron"
-         target="_blank" rel="noopener noreferrer">Patreon</a>
+      <a
+        class="link-button"
+        href="https://www.patreon.com/c/saethron/posts?vanity=saethron"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Patreon
+      </a>
 
-      <a class="link-button"
-         href="https://www.instagram.com/saethron/"
-         target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a
+        class="link-button"
+        href="https://www.instagram.com/saethron/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
 
-      <a class="link-button"
-         href="https://www.youtube.com/@saethron"
-         target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a
+        class="link-button"
+        href="https://www.youtube.com/@saethron"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        YouTube
+      </a>
 
-      <a class="link-button"
-         href="https://saethron.bandcamp.com/album/songs-of-dune"
-         target="_blank" rel="noopener noreferrer">Bandcamp</a>
+      <a
+        class="link-button"
+        href="https://saethron.bandcamp.com/album/songs-of-dune"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Bandcamp
+      </a>
     </div>
   </div>
+
 </body>
 </html>
